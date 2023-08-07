@@ -1,12 +1,12 @@
-const density =  'Ñ@#W$9876543210?!abc;:+=-,._ ';
-let nika;
+const density =  'Ñ@#W$9876543210?!abc;:+=-,._   ';
+// const density = '       .:-i|=+%O#@';
+// const density = '        .:░▒▓█';
 let vid;
 let asciiDiv;
 function setup() {
-//   noCanvas();
     frameRate(30);
   vid = createVideo(
-    ['vid/bad_apple.mp4'],
+    ['vid/GEAR5.mp4'],
     vidLoad
   );
 
@@ -16,7 +16,7 @@ function setup() {
 
 function draw() {
     vid.loadPixels();
-    console.log(vid.pixels[0]);
+    // console.log(vid.pixels[0]);
     let asciiImage = "";
     for(let j = 0; j < vid.height; j++){
         for(let i = 0; i < vid.width; i++) {
@@ -41,5 +41,5 @@ function draw() {
 // This function is called when the video loads
 function vidLoad() {
   vid.loop();
-  vid.volume(100);
+  vid.volume(1);
 }
